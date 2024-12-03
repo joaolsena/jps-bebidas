@@ -6,6 +6,7 @@ function Pesquisa() {
   const [searchTerm, setSearchTerm] = useState('');
   const [cart, setCart] = useState([]);
 
+
   const todosProdutos = [
     { name: 'Heineken', price: 7.00, image: 'https://carrefourbrfood.vtexassets.com/arquivos/ids/23256938/cerveja-heineken-garrafa-600-ml-3.jpg' },
     { name: 'Água', price: 3.00, image: 'https://ibassets.com.br/ib.item.image.large/l-fd83a662da92460c81fae7b06f0f8bb2.jpeg' },
