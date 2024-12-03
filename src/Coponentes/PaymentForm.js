@@ -1,12 +1,55 @@
 import React, { useState } from 'react';
 
-function PaymentForm({ confirmPayment, closeModal }) {
+function PaymentForm({ confirmPayment, closeModal, cartItems }) {
   const [paymentMethod, setPaymentMethod] = useState('');
   const [deliveryMethod, setDeliveryMethod] = useState('');
   const [details, setDetails] = useState({ name: '', address: '', phone: '' });
 
   const handleChange = (e) => {
     setDetails({ ...details, [e.target.name]: e.target.value });
+  };
+
+  // Função para calcular o total do pedido com base no carrinho
+  const calculateTotal = () => {
+    return cartItems.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
+  };
+
+  // Função para gerar a mensagem do WhatsApp com os dados do pedido
+  const sendMessageToWhatsApp = () => {
+    // Verifica se todos os campos obrigatórios estão preenchidos
+    if (!paymentMethod || !deliveryMethod || 
+        (deliveryMethod === 'Entrega' && (!details.name || !details.address || !details.phone)) || 
+        (deliveryMethod === 'Retirada' && !details.name)) {
+      alert('Por favor, preencha todos os campos obrigatórios.');
+      return;
+    }
+
+    const total = calculateTotal();
+    const itemsDetails = cartItems.map(item => 
+      `*${item.name}* - Quantidade: ${item.quantity} - Preço: R$ ${item.price.toFixed(2)}`
+    ).join('\n');
+
+    const message = `
+      *Detalhes do Pedido:*\n
+      *Forma de Pagamento:* ${paymentMethod}\n
+      *Forma de Entrega:* ${deliveryMethod}\n
+      ${deliveryMethod === 'Entrega' ? `
+        *Nome:* ${details.name}\n
+        *Endereço:* ${details.address}\n
+        *Telefone:* ${details.phone}` : ''}
+      ${deliveryMethod === 'Retirada' ? `
+        *Nome para Retirada:* ${details.name}` : ''}
+    
+      *Itens:*\n
+      ${itemsDetails}
+      
+      *Valor Total:* R$ ${total}
+    `;
+    
+    // Substitua o número do telefone abaixo com o número do seu WhatsApp
+    const phoneNumber = '5596991538887'; 
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -99,7 +142,10 @@ function PaymentForm({ confirmPayment, closeModal }) {
           )}
           <button
             type="button"
-            onClick={() => confirmPayment(paymentMethod, deliveryMethod, details)}
+            onClick={() => {
+              confirmPayment(paymentMethod, deliveryMethod, details);
+              sendMessageToWhatsApp(); // Envia a mensagem para o WhatsApp
+            }}
           >
             Confirmar
           </button>

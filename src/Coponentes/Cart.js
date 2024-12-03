@@ -35,17 +35,14 @@ const Cart = ({ cart, updateCart }) => {
     if (!paymentMethod || !deliveryMethod || 
         (deliveryMethod === 'Entrega' && (!details.name || !details.address || !details.phone)) || 
         (deliveryMethod === 'Retirada' && !details.name)) {
-      alert('Por favor, preencha todos os campos obrigatórios.');
       return;
     }
 
-    
     updateCart([]);
     setIsPaymentVisible(false); 
     alert('Pagamento confirmado! Carrinho limpo.');
   };
 
-  
   const closeModal = () => {
     setIsPaymentVisible(false);
   };
@@ -89,7 +86,11 @@ const Cart = ({ cart, updateCart }) => {
           </div>
         </>
       ) : (
-        <PaymentForm confirmPayment={confirmPayment} closeModal={closeModal} />
+        <PaymentForm 
+          confirmPayment={confirmPayment} 
+          closeModal={closeModal} 
+          cartItems={cart}  // Passando os itens do carrinho para o PaymentForm
+        />
       )}
     </div>
   );
