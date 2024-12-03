@@ -46,7 +46,6 @@ function PaymentForm({ confirmPayment, closeModal, cartItems }) {
       *Valor Total:* R$ ${total}
     `;
     
-    // Substitua o número do telefone abaixo com o número do seu WhatsApp
     const phoneNumber = '5596991538887'; 
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
