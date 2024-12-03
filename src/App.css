@@ -3,12 +3,6 @@
   color: gold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -20,24 +14,15 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px 0px;
   background-color: #222;
+  margin-top: -10px;
+  margin-left: -9px;
+  margin-right: -9px;
 }
 
 .navbar h2 {
@@ -120,19 +105,6 @@ margin-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.8);
 }
 
-..search-container {
-  position: absolute;
-  top: 20px; /* Distância do topo da página */
-  left: 50%; /* Centraliza o contêiner horizontalmente */
-  transform: translateX(-50%); /* Ajusta o deslocamento para centralizar */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 600px; /* Limita a largura máxima da barra de pesquisa */
-  z-index: 10;
-}
-
 .search-container input[type="text"] {
   flex: 1;
   padding: 12px 20px;
@@ -141,23 +113,8 @@ margin-bottom: 10px;
   font-size: 16px;
 }
 
-.search-container button {
-  padding: 12px 20px;
-  margin-left: 8px;
-  border: none;
-  background-color: gold;
-  color: black;
-  font-size: 16px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.search-container button:hover {
-  background-color: #ffd700;
-}
-
 .produtos-container {
-  margin-top: 100px; /* Distância da barra de pesquisa para os produtos */
+  margin-top: 100px; 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -208,7 +165,7 @@ margin-bottom: 10px;
 
 .cart-container {
   position: fixed;
-  top: 0px;
+  top: 0;
   right: 5px;
   z-index: 100;
 }
@@ -216,10 +173,14 @@ margin-bottom: 10px;
 .cart {
   display: none;
   background-color: #222;
-  padding: 20px;
+  padding: 40px;
   color: gold;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.cart.show {
+  display: block; /* Aparece quando a classe 'show' for adicionada */
 }
 
 .cart ul {
@@ -244,46 +205,30 @@ button:hover {
   background-color: #ffd700;
 }
 
+
 #cartButton {
   background-color: gold;
   color: black;
-  padding: 10px 15px;
+  padding: 10px 10px;
   border-radius: 4px;
   cursor: pointer;
 }
 
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 200;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background-color: #222;
-  padding: 20px;
-  border-radius: 8px;
-  color: gold;
-  text-align: center;
-  width: 300px;
-}
-
-.modal-content button {
-  margin: 10px;
-}
-.modal-content label {
+.cart ul li {
   display: flex;
- 
-  justify-content: center;
-  margin-bottom: 0px; 
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
-.modal-content input[type="radio"] {
-  margin-right: 5px; /* Espaçamento entre a bolinha e o texto */
+.cart-header {
+  display: flex;
+  gap: 5px;
 }
+
+.cart-header button {
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+

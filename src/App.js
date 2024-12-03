@@ -1,9 +1,10 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './Coponentes/NavBar';
 import Nome from './Coponentes/Nome';
 import Pesquisa from './Coponentes/Pesquisa';
-import Produtos from './Coponentes/Protutos';
-import Carrinho from './Coponentes/Carrinho';
+import Produtos from './Coponentes/produtos';
+
 function App() {
   return (
     <div className="App">
@@ -11,7 +12,7 @@ function App() {
   <Nome/>
   <Pesquisa/>
   <Produtos/>
-  <Carrinho/>
+  
   <div class="footer">
       <p>&copy; 2024 João Sena. Todos os direitos reservados.</p>    
     </div>
