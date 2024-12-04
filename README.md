@@ -2,6 +2,12 @@
 
 Bem-vindo ao repositório do site da **JPS BEBIDAS**, uma loja online especializada na venda de bebidas como cervejas, água e refrigerantes.
 
+
+
+
+https://github.com/user-attachments/assets/1467563a-1a76-488c-820d-a7b7652d1133
+
+
 ## Descrição
 
 O projeto foi desenvolvido com **React** para criar uma interface de usuário moderna e interativa, onde os clientes podem explorar uma variedade de bebidas e realizar compras online. A aplicação também apresenta o nome da loja em dourado sobre um fundo preto, criando uma aparência sofisticada e elegante.
