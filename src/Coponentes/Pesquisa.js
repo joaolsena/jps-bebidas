@@ -12,7 +12,7 @@ function Pesquisa() {
     { name: 'Água', price: 3.00, image: 'https://ibassets.com.br/ib.item.image.large/l-fd83a662da92460c81fae7b06f0f8bb2.jpeg' },
     { name: 'Coca Cola 1L', price: 7.00, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3ag72Tmv6D2Q8OdHVKLldaR644a3azLR8Fw&s' },
     { name: 'Guaraná', price: 4.00, image: 'https://www.galaxcommerce.com.br/sistema/upload/1994/produtos/refrigerante-guarana-antarctica-lata-350-ml_2020-11-24_14-10-38_0_535.jpeg' },
-    { name: 'Coca-cola lata', price: 5.00, image: 'https://andinacocacola.vtexassets.com/arquivos/ids/158244/Coca-Cola-Original-350ml-Lata---110130_COCA_PAI.png?v=638628901095270000' },
+    { name: 'Coca-cola Lata', price: 5.00, image: 'https://andinacocacola.vtexassets.com/arquivos/ids/158244/Coca-Cola-Original-350ml-Lata---110130_COCA_PAI.png?v=638628901095270000' },
     { name: 'Fanta Uva lata', price: 4.00, image: 'https://andinacocacola.vtexassets.com/arquivos/ids/158546-336-336?v=638659855346030000&width=336&height=336&aspect=true' },
      { name: 'AMSTEL', price: 3.00, image: 'https://static.paodeacucar.com/img/uploads/1/498/24656498.jpg' },
      { name: 'SKOL', price: 3.00, image: 'https://prezunic.vtexassets.com/arquivos/ids/193015/6568d783e1d9f5b4beb95faa.jpg?v=638369665355430000' },
