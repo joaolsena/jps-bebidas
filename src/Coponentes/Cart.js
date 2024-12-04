@@ -40,7 +40,7 @@ const Cart = ({ cart, updateCart }) => {
 
     updateCart([]);
     setIsPaymentVisible(false); 
-    alert('Pagamento confirmado! Carrinho limpo.');
+    alert('Pedido confirmado! finalize mandando o pedido no WhatsApp');
   };
 
   const closeModal = () => {
