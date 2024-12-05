@@ -14,7 +14,7 @@ function navbar(){
     <a href="https://www.facebook.com/jpsbebidas" target="_blank"rel="noopener noreferrer"class="social-icon facebook">
       <img src="https://cdn-icons-png.flaticon.com/256/124/124010.png" alt="Facebook"></img>
     </a>
-    <a href="https://www.twitter.com/jpsbebidas" target="_blank" rel="noopener noreferrer"class="social-icon whatsapp">
+    <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer"class="social-icon whatsapp">
       <img src="https://cdn-icons-png.flaticon.com/512/174/174879.png" alt="whatsapp"></img>
     </a>
 </div>
