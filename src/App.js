@@ -13,7 +13,8 @@ function App() {
   <Produtos/>
   
   <div class="footer">
-      <p>&copy; 2024 João Sena. Todos os direitos reservados.</p>    
+      <p>&copy; 2024 JPS BEBIDAS. Todos os direitos reservados. Desenvolvido por <a href="mailto:joaolsena129@gmail.com" className="criador">João Sena</a>
+      </p>  
     </div>
     </div>
   );

@@ -262,3 +262,10 @@ button:hover {
 .modal-content input[type="radio"] {
   margin-right: 5px; /* Espaçamento entre a bolinha e o texto */
 }
+
+
+.criador{
+  background-color: #222;
+  color: gold;
+  margin-top: 40px;
+}
