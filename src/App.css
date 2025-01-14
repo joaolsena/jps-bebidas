@@ -25,6 +25,11 @@
   margin-right: -9px;
 }
 
+.navbar h2 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: bold;
+}
 
 .navbar nav {
   display: flex;
@@ -36,7 +41,7 @@
     color: gold;
   text-decoration: none;
   margin: 0 15px;
-  font-size: 18px;
+  font-size: 15px;
   display: block; 
 margin-bottom: 10px;
 }
