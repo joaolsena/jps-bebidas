@@ -25,11 +25,6 @@
   margin-right: -9px;
 }
 
-.navbar h2 {
-  margin: 0;
-  font-size: 28px;
-  font-weight: bold;
-}
 
 .navbar nav {
   display: flex;
@@ -73,10 +68,6 @@ margin-bottom: 10px;
 
 .social-icon.instagram:hover {
   background-color: #e4405f;
-}
-
-.social-icon.facebook:hover {
-  background-color: #3b5998;
 }
 
 .social-icon.whatsapp:hover {
